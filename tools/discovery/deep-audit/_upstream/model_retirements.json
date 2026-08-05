@@ -1,0 +1,508 @@
+{
+  "last_updated_utc": "2026-07-08",
+  "sources": {
+    "foundry": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule",
+    "azure_openai": "https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirements"
+  },
+  "foundry": [
+    {
+      "Model": "Jamba Instruct",
+      "Legacy": "February 1, 2025",
+      "Deprecation": "February 1, 2025",
+      "Retirement": "March 1, 2025",
+      "Replacement": null
+    },
+    {
+      "Model": "AI21-Jamba-1.5-Large",
+      "Legacy": "May 1, 2025",
+      "Deprecation": "July 1, 2025",
+      "Retirement": "August 1, 2025",
+      "Replacement": null
+    },
+    {
+      "Model": "AI21-Jamba-1.5-Mini",
+      "Legacy": "May 1, 2025",
+      "Deprecation": "July 1, 2025",
+      "Retirement": "August 1, 2025",
+      "Replacement": null
+    },
+    {
+      "Model": "Bria-2.3-Fast",
+      "Legacy": null,
+      "Deprecation": "August 31, 2025",
+      "Retirement": "October 31, 2025",
+      "Replacement": null
+    },
+    {
+      "Model": "Command R",
+      "Legacy": "February 24, 2025",
+      "Deprecation": "March 25, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Cohere Command R 08-2024"
+    },
+    {
+      "Model": "Command R+",
+      "Legacy": "February 24, 2025",
+      "Deprecation": "March 25, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Cohere Command R+ 08-2024"
+    },
+    {
+      "Model": "Cohere-rerank-v3-english",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Cohere-rerank-v4.0-pro or Cohere-rerank-v4.0-fast"
+    },
+    {
+      "Model": "Cohere-rerank-v3-multilingual",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Cohere-rerank-v4.0-pro or Cohere-rerank-v4.0-fast"
+    },
+    {
+      "Model": "Cohere-rerank-v3.5",
+      "Legacy": "January 14, 2026",
+      "Deprecation": "February 14, 2026",
+      "Retirement": "May 14, 2026",
+      "Replacement": "Cohere-rerank-v4.0-pro or Cohere-rerank-v4.0-fast"
+    },
+    {
+      "Model": "jais-30b-chat",
+      "Legacy": "September 30, 2025",
+      "Deprecation": "October 31, 2025",
+      "Retirement": "January 30, 2026",
+      "Replacement": null
+    },
+    {
+      "Model": "DeepSeek-V3",
+      "Legacy": "April 10, 2025",
+      "Deprecation": "May 31, 2025",
+      "Retirement": "August 31, 2025",
+      "Replacement": "DeepSeek-V3-0324"
+    },
+    {
+      "Model": "Gretel-Navigator-Tabular",
+      "Legacy": null,
+      "Deprecation": "June 16, 2025",
+      "Retirement": "September 16, 2025",
+      "Replacement": null
+    },
+    {
+      "Model": "Llama-2-13b",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Meta-Llama-3.1-8B-Instruct"
+    },
+    {
+      "Model": "Llama-2-13b-chat",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Meta-Llama-3.1-8B-Instruct"
+    },
+    {
+      "Model": "Llama-2-70b",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "Model": "Llama-2-70b-chat",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "Model": "Llama-2-7b",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Meta-Llama-3.1-8B-Instruct"
+    },
+    {
+      "Model": "Llama-2-7b-chat",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Meta-Llama-3.1-8B-Instruct"
+    },
+    {
+      "Model": "Meta-Llama-3-70B-Instruct",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "Model": "Meta-Llama-3-8B-Instruct",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Meta-Llama-3.1-8B-Instruct"
+    },
+    {
+      "Model": "Meta-Llama-3.1-70B-Instruct",
+      "Legacy": "February 28, 2025",
+      "Deprecation": "March 31, 2025",
+      "Retirement": "June 30, 2025",
+      "Replacement": "Llama-3.3-70B-Instruct"
+    },
+    {
+      "Model": "MAI-DS-R1",
+      "Legacy": "January 16, 2026",
+      "Deprecation": "January 27, 2026",
+      "Retirement": "February 27, 2026",
+      "Replacement": "Any DeepSeek model available in the Model catalog"
+    },
+    {
+      "Model": "Phi-3-medium-4k-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4"
+    },
+    {
+      "Model": "Phi-3-medium-128k-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4"
+    },
+    {
+      "Model": "Phi-3-mini-4k-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4-mini-instruct"
+    },
+    {
+      "Model": "Phi-3-mini-128k-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4-mini-instruct"
+    },
+    {
+      "Model": "Phi-3-small-8k-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4-mini-instruct"
+    },
+    {
+      "Model": "Phi-3-small-128k-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4-mini-instruct"
+    },
+    {
+      "Model": "Phi-3.5-mini-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4-mini-instruct"
+    },
+    {
+      "Model": "Phi-3.5-MoE-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4-mini-instruct"
+    },
+    {
+      "Model": "Phi-3.5-vision-instruct",
+      "Legacy": "June 9, 2025",
+      "Deprecation": "June 30, 2025",
+      "Retirement": "August 30, 2025",
+      "Replacement": "Phi-4-mini-instruct"
+    },
+    {
+      "Model": "Mistral-Nemo",
+      "Legacy": "September 30, 2025",
+      "Deprecation": "October 31, 2025",
+      "Retirement": "January 30, 2026",
+      "Replacement": "Mistral-small-2503"
+    },
+    {
+      "Model": "Mistral-large-2411",
+      "Legacy": "September 30, 2025",
+      "Deprecation": "October 31, 2025",
+      "Retirement": "January 30, 2026",
+      "Replacement": "Mistral-medium-2505"
+    },
+    {
+      "Model": "Mistral-ocr-2503",
+      "Legacy": "September 30, 2025",
+      "Deprecation": "October 31, 2025",
+      "Retirement": "January 30, 2026",
+      "Replacement": "Mistral-document-ai-2505"
+    },
+    {
+      "Model": "Mistral-small",
+      "Legacy": "March 31, 2025",
+      "Deprecation": "April 30, 2025",
+      "Retirement": "July 31, 2025",
+      "Replacement": "Mistral-small-2503"
+    },
+    {
+      "Model": "Mistral-large-2407",
+      "Legacy": "January 13, 2025",
+      "Deprecation": "February 13, 2025",
+      "Retirement": "May 13, 2025",
+      "Replacement": "Mistral-medium-2505"
+    },
+    {
+      "Model": "Mistral-large",
+      "Legacy": "December 15, 2024",
+      "Deprecation": "January 15, 2025",
+      "Retirement": "April 15, 2025",
+      "Replacement": "Mistral-medium-2505"
+    }
+  ],
+  "azure_openai": [
+    {
+      "Model": "gpt-5-chat",
+      "Version": "2025-08-07",
+      "Deprecation": null,
+      "Retirement": "2026-03-01",
+      "Replacement": "gpt-5.2-chat"
+    },
+    {
+      "Model": "gpt-5-chat",
+      "Version": "2025-10-03",
+      "Deprecation": null,
+      "Retirement": "2026-03-01",
+      "Replacement": "gpt-5.2-chat"
+    },
+    {
+      "Model": "gpt-4o",
+      "Version": "2024-05-13",
+      "Deprecation": "2025-05-13",
+      "Retirement": "2026-10-01",
+      "Replacement": "gpt-5.1"
+    },
+    {
+      "Model": "gpt-4o",
+      "Version": "2024-08-06",
+      "Deprecation": "2025-08-06",
+      "Retirement": "2026-10-01",
+      "Replacement": "gpt-5.1"
+    },
+    {
+      "Model": "gpt-4o",
+      "Version": "2024-08-06-ev3",
+      "Deprecation": "2025-08-06",
+      "Retirement": "2026-03-31",
+      "Replacement": "gpt-5.1"
+    },
+    {
+      "Model": "gpt-4o",
+      "Version": "2024-11-20",
+      "Deprecation": "2025-11-20",
+      "Retirement": "2026-10-01",
+      "Replacement": "gpt-5.1"
+    },
+    {
+      "Model": "gpt-4o-mini",
+      "Version": "2024-07-18",
+      "Deprecation": "2025-07-18",
+      "Retirement": "2026-10-01",
+      "Replacement": "gpt-4.1-mini"
+    },
+    {
+      "Model": "gpt-4.1",
+      "Version": "2025-04-14",
+      "Deprecation": "2026-04-14",
+      "Retirement": "2026-10-14",
+      "Replacement": "gpt-5"
+    },
+    {
+      "Model": "gpt-4.1-mini",
+      "Version": "2025-04-14",
+      "Deprecation": "2026-04-14",
+      "Retirement": "2026-10-14",
+      "Replacement": "gpt-5-mini"
+    },
+    {
+      "Model": "gpt-4.1-nano",
+      "Version": "2025-04-14",
+      "Deprecation": "2026-04-14",
+      "Retirement": "2026-10-14",
+      "Replacement": "gpt-5-nano"
+    },
+    {
+      "Model": "o1",
+      "Version": "2024-12-17",
+      "Deprecation": "2025-12-17",
+      "Retirement": "2026-09-16",
+      "Replacement": "o3"
+    },
+    {
+      "Model": "o1-pro",
+      "Version": "2025-03-19",
+      "Deprecation": "2026-03-19",
+      "Retirement": "2026-09-18",
+      "Replacement": "o3-pro"
+    },
+    {
+      "Model": "o3-mini",
+      "Version": "2025-01-31",
+      "Deprecation": "2026-01-31",
+      "Retirement": "2026-10-01",
+      "Replacement": "o4-mini"
+    },
+    {
+      "Model": "o3",
+      "Version": "2025-04-16",
+      "Deprecation": "2026-04-16",
+      "Retirement": "2026-10-16",
+      "Replacement": null
+    },
+    {
+      "Model": "o3-pro",
+      "Version": "2025-06-10",
+      "Deprecation": "2026-06-10",
+      "Retirement": "2026-12-10",
+      "Replacement": null
+    },
+    {
+      "Model": "o3-deep-research",
+      "Version": "2025-06-26",
+      "Deprecation": "2026-06-26",
+      "Retirement": "2026-12-26",
+      "Replacement": null
+    },
+    {
+      "Model": "o4-mini",
+      "Version": "2025-04-16",
+      "Deprecation": "2026-04-16",
+      "Retirement": "2026-10-16",
+      "Replacement": null
+    },
+    {
+      "Model": "codex-mini",
+      "Version": "2025-05-16",
+      "Deprecation": "2026-05-16",
+      "Retirement": "2026-11-15",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-5-mini",
+      "Version": "2025-08-07",
+      "Deprecation": "2026-08-07",
+      "Retirement": "2027-02-06",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-5-nano",
+      "Version": "2025-08-07",
+      "Deprecation": "2026-08-07",
+      "Retirement": "2027-02-06",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-5-codex",
+      "Version": "2025-09-15",
+      "Deprecation": "2026-09-15",
+      "Retirement": "2027-03-17",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-5-pro",
+      "Version": "2025-10-06",
+      "Deprecation": "2026-10-06",
+      "Retirement": "2027-04-07",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-5.1",
+      "Version": "2025-11-13",
+      "Deprecation": "2026-11-13",
+      "Retirement": "2027-05-15",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-5.1-codex",
+      "Version": "2025-11-13",
+      "Deprecation": "2026-11-13",
+      "Retirement": "2027-05-15",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-5.1-codex-mini",
+      "Version": "2025-11-13",
+      "Deprecation": "2026-11-13",
+      "Retirement": "2027-05-15",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-5.2",
+      "Version": "2025-12-11",
+      "Deprecation": "No earlier than 2026-12-12",
+      "Retirement": "No earlier than 2027-05-12",
+      "Replacement": null
+    },
+    {
+      "Model": "gpt-4o-audio-preview",
+      "Version": "2024-12-17",
+      "Deprecation": null,
+      "Retirement": "2026-02-02",
+      "Replacement": "gpt-audio"
+    },
+    {
+      "Model": "gpt-4o-realtime-preview",
+      "Version": "2024-12-17",
+      "Deprecation": null,
+      "Retirement": "2026-02-02",
+      "Replacement": "gpt-realtime"
+    },
+    {
+      "Model": "dall-e-3",
+      "Version": "3",
+      "Deprecation": null,
+      "Retirement": "2026-02-18",
+      "Replacement": "gpt-image-1-mini"
+    },
+    {
+      "Model": "gpt-image-1",
+      "Version": "2025-04-15",
+      "Deprecation": null,
+      "Retirement": "No earlier than 2026-03-31",
+      "Replacement": "gpt-image-1-mini"
+    },
+    {
+      "Model": "sora",
+      "Version": "2025-05-02",
+      "Deprecation": null,
+      "Retirement": "No earlier than 2026-02-28",
+      "Replacement": "sora-2"
+    },
+    {
+      "Model": "text-embedding-3-large",
+      "Version": "1",
+      "Deprecation": null,
+      "Retirement": "No earlier than 2026-10-30",
+      "Replacement": null
+    },
+    {
+      "Model": "text-embedding-3-small",
+      "Version": "1",
+      "Deprecation": null,
+      "Retirement": "No earlier than 2026-10-30",
+      "Replacement": null
+    },
+    {
+      "Model": "text-embedding-ada-002",
+      "Version": "2",
+      "Deprecation": null,
+      "Retirement": "No earlier than 2026-10-30",
+      "Replacement": null
+    }
+  ]
+}

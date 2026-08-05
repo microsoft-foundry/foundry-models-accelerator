@@ -1,0 +1,17 @@
+# Foundry Models Accelerator — Python dependencies
+#
+# These cover the audit script (tools/audit) and the evaluator stub
+# (tools/evaluator). The full upstream evaluator package (#4) pulls in
+# additional dependencies — see tools/evaluator/README.md before running it.
+
+# Azure OpenAI / Foundry SDK
+openai>=1.40.0
+azure-identity>=1.17.0
+azure-ai-evaluation>=1.0.0
+
+# Data / IO
+python-dotenv>=1.0.0
+
+# Dev tooling
+ruff>=0.5.0
+pytest>=8.0.0

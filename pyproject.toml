@@ -1,0 +1,19 @@
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+exclude = [
+    ".venv",
+    "examples/notebooks",
+    # Vendored verbatim from upstream — keep diffs against upstream minimal.
+    # See THIRD_PARTY_NOTICES.md.
+    "tools/audit/audit_codebase.py",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+ignore = [
+    # Allow non-ASCII characters in the audit report banner (emoji)
+    "RUF001",
+    "RUF002",
+    "RUF003",
+]

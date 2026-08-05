@@ -1,0 +1,25 @@
+# CODEOWNERS for Foundry-Models-Accelerator
+#
+# Each line is a file pattern followed by one or more owners.
+# These owners are automatically requested for review when PRs touch the
+# matching paths. Upstream maintainers are listed where they have offered
+# co-maintainership of their contributed area.
+
+# Default: repo maintainers
+*                                       @microsoft/foundry-models-accelerator-maintainers
+
+# Methodology — upstream #1
+/docs/01-methodology/                   @microsoft/foundry-models-accelerator-maintainers
+
+# Discovery scanner — upstream #2
+/tools/discovery/                       @microsoft/foundry-models-accelerator-maintainers
+
+# Audit script & 5.1-specific guidance — upstream #3
+/tools/audit/                           @microsoft/foundry-models-accelerator-maintainers
+/presentation/                          @microsoft/foundry-models-accelerator-maintainers
+
+# Evaluator, datasets, skills, notebooks — upstream #4
+/tools/evaluator/                       @microsoft/foundry-models-accelerator-maintainers
+/data/golden-datasets/                  @microsoft/foundry-models-accelerator-maintainers
+/skills/                                @microsoft/foundry-models-accelerator-maintainers
+/examples/notebooks/                    @microsoft/foundry-models-accelerator-maintainers
