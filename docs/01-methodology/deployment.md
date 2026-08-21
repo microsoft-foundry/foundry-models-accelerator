@@ -7,15 +7,21 @@
 
 ## Deployment strategy
 
-1. **Create a new deployment** for the target model — do **not** replace the
-   existing one in place.
-2. Ensure quota allocation supports parallel testing:
-   - If using **PTU**, plan a capacity split.
-   - If using **Standard**, ensure quota headroom.
-   - If the same target deployment will also be the **judge model** for
-     AI‑assisted evaluations, plan eval runs for off‑peak hours.
-3. **Keep rollback easy:** don't delete the old deployment until cutover is
-   stable.
+The supported migration path depends on the deployment type:
+
+| Deployment type | Supported migration path |
+|-----------------|--------------------------|
+| Standard, Global Standard, Data Zone Standard | Azure auto-upgrades deployments on a rolling schedule. Control timing with `versionUpgradeOption`. You can still create a separate target deployment for controlled testing and rollback. |
+| Provisioned (PTU) | Choose an in-place migration, which moves traffic over 20–30 minutes without downtime, or a side-by-side migration. Confirm target-model quota before deploying side by side. |
+| Batch | Deploy the target side by side, resubmit jobs, and retire the source deployment. |
+
+Prefer side-by-side migration when risk, validation requirements, or rollback
+needs justify the additional quota. Keep the source deployment available until
+the target passes production rollout gates.
+
+For parallel testing, ensure quota headroom or plan a PTU capacity split. If the
+target deployment will also serve as the judge model for AI-assisted
+evaluations, plan evaluation runs for off-peak hours.
 
 ## Performance and cost validation
 

@@ -16,27 +16,51 @@ The end‑to‑end **operational** playbook. Phases below are sequential.
 - [ ] Feasibility score ≥ 10 with no 0s ([`docs/03-feasibility-assessment.md`](./03-feasibility-assessment.md))
 - [ ] Retirement deadline noted ([`docs/04-retirement-timeline.md`](./04-retirement-timeline.md))
 - [ ] Code changes scoped via [`tools/audit/`](../tools/audit/)
-- [ ] Golden dataset exists ([`docs/06-building-golden-datasets.md`](./06-building-golden-datasets.md))
+- [ ] Golden dataset, expected outputs, success criteria, and evaluation
+      thresholds are frozen for this migration
+      ([`docs/06-building-golden-datasets.md`](./06-building-golden-datasets.md))
 - [ ] Subscribed to availability‑change notifications for the target model ([`tools/availability/`](../tools/availability/)) so a regional/SKU change during rollout doesn't surprise you
 
-## Phase 2 — Build and pre‑deploy
+## Phase 2 — Choose the deployment path, build, and pre‑deploy
 
-- [ ] Create a **new** target deployment (do not replace in place).
-- [ ] Confirm quota (TPM/RPM, PTU capacity).
-- [ ] Apply code changes per [`docs/05-api-changes-by-model.md`](./05-api-changes-by-model.md).
+- [ ] Identify the deployment type: Standard-family, PTU, or Batch.
+- [ ] Choose the migration path:
+  - Standard-family: configure `versionUpgradeOption`, or create a separate
+    target deployment for a controlled migration.
+  - PTU: choose an in-place or side-by-side migration.
+  - Batch: create a side-by-side target deployment and plan to resubmit jobs.
+- [ ] Confirm target-model quota when the selected path requires parallel
+      deployments.
+- [ ] Document the rollback or recovery path before moving traffic.
+- [ ] Run the current workload unchanged against a non-production or temporary
+      target deployment using the frozen dataset.
+- [ ] Save the unchanged target results as the adaptation baseline.
+- [ ] Record behavioral differences before changing the workload.
+- [ ] Adapt prompts, parameters, tool definitions, output schemas, calling code,
+      and downstream parsing as required. Use
+      [`docs/05-api-changes-by-model.md`](./05-api-changes-by-model.md) for
+      model-specific changes.
+- [ ] Record what changed and why.
 - [ ] If migrating across the Chat Completions → Responses API boundary, run the API‑migration tooling ([`tools/api-migration/`](../tools/api-migration/)) and mirror the upstream `demo/openai-chat-app-quickstart` sample as the reference shape.
 - [ ] CI green on changed code (`ruff`, `pytest`, application tests).
 
-## Phase 3 — Pilot / shadow
+## Phase 3 — Validate, then pilot / shadow
+
+Before exposing users to the target:
+
+1. Run the source model on the frozen dataset to establish the source baseline.
+2. Run the adapted target on the same dataset with the same evaluators.
+3. Compare quality, latency, and cost against the agreed thresholds.
+4. Do not begin the pilot until all validation gates pass.
 
 | Mode | What it does | When to use |
 |------|--------------|-------------|
-| **Shadow** | Mirror production traffic to the target model, **discard** the response, log + evaluate offline | Detect regressions without user impact |
-| **Pilot** | Real traffic, 1–5% routed to target | After shadow looks clean |
+| **Shadow** | Mirror production traffic to the target model, **discard** the response, log + evaluate offline | After offline validation passes; detects regressions without user impact |
+| **Pilot** | Real traffic, 1–5% routed to target | After offline validation and shadow results pass |
 
-Evaluation gate: run the full golden dataset
-([`docs/07-evaluation-guide.md`](./07-evaluation-guide.md)) against the
-*shadow* output. Block proceeding if any quality threshold regresses.
+After offline validation passes, evaluate shadow outputs against the same
+thresholds ([`docs/07-evaluation-guide.md`](./07-evaluation-guide.md)). Block
+the pilot if any quality, latency, or cost threshold regresses.
 
 ## Phase 4 — Phased rollout
 
@@ -52,8 +76,8 @@ At each step hold for at least one business cycle (e.g., 24 hours) and check:
 
 ## Phase 5 — Rollback criteria
 
-Any **one** of these triggers an automatic rollback (the previous deployment
-must still exist — see Phase 2):
+Any **one** of these triggers the rollback or recovery action documented in
+Phase 2. For side-by-side migrations, the previous deployment must still exist:
 
 | Signal | Threshold (suggested) |
 |--------|-----------------------|
@@ -66,9 +90,8 @@ must still exist — see Phase 2):
 
 ## Phase 6 — Post‑cutover
 
-- [ ] Schedule nightly evaluation runs (see [`docs/07`](./07-evaluation-guide.md) §
-      "Continuous evaluation in CI").
-- [ ] Decommission the old deployment **only after** ≥ 7 days of stable
-      production on the target.
+- [ ] Schedule nightly evaluation runs (see [`docs/07`](./07-evaluation-guide.md) "Continuous evaluation in CI").
+- [ ] For side-by-side and Batch migrations, decommission the source deployment
+      only after the rollback window closes and production remains stable.
 - [ ] Update inventory (re‑run [`tools/discovery/`](../tools/discovery/)).
 - [ ] Capture lessons in your runbook so the next migration is cheaper.

@@ -8,6 +8,22 @@ parameter‑level changes per target model, the canonical reference is
 [`docs/05-api-changes-by-model.md`](../05-api-changes-by-model.md); this page
 focuses on the *qualitative* delta you should capture in your migration plan.
 
+## Baseline: replay the workload unchanged
+
+Before changing prompts, parameters, tools, schemas, or calling code, run the
+current workload against the target model using the frozen test dataset.
+
+Record changes in:
+
+- Response quality, tone, verbosity, and refusal behavior
+- Structured-output and schema adherence
+- Tool selection, arguments, and sequencing
+- Latency, token usage, and cost
+- Response shapes and downstream parsing
+
+This unchanged replay separates behavior introduced by the target model from
+behavior introduced by your adaptations.
+
 ## 1. Capabilities
 
 - Instruction following / reasoning style differences
@@ -37,7 +53,22 @@ Relevant when the app relies on parametric knowledge rather than RAG.
   selection, verbosity)?
 - What must be retested because of the above?
 
+## Track adaptations
+
+Record every adaptation and why it was required:
+
+| Surface | Source behavior | Adaptation | Reason | Validation test |
+|---------|-----------------|------------|--------|-----------------|
+| Prompt | | | | |
+| Parameters | | | | |
+| Tool definitions | | | | |
+| Output schema | | | | |
+| Calling code and parsing | | | | |
+
 ---
 
-→ Once your delta sheet is signed off, plan the actual rollout in
-[**C. Deployment & rollout**](./deployment.md).
+→ Once the unchanged replay and adaptations are documented, validate the source
+and adapted target against the frozen dataset in
+[**D. Evaluation & testing**](./evaluation.md). Move to
+[**C. Deployment & rollout**](./deployment.md) only after the validation gates
+pass.
