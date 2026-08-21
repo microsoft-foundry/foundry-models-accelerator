@@ -16,7 +16,7 @@ these workstreams.
 | **C. Deployment & rollout** | How do we ship the change safely? | [`deployment.md`](./deployment.md) |
 | **D. Evaluation & testing** | How do we know the new model is at least as good? | [`evaluation.md`](./evaluation.md) |
 
-## How this maps to the Microsoft Foundry migration lifecycle
+## How this maps to the Microsoft Foundry migration process
 
 The A–D labels preserve the source methodology; they are **not a chronological
 execution order**. For an end-to-end migration, follow the six-phase
